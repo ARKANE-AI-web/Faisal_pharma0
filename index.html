@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الصيدلي فيصل عسيري | صفحة الهبوط التدريبية</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;overflow-x:hidden}
+body{
+  font-family:"Segoe UI","Tahoma",Arial,sans-serif;
+  background:#f4f6f9;
+  color:#16324f;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.bg-decor{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(44,110,155,.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(22,50,79,.10) 0%, transparent 45%);
+}
+.wrap{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;max-width:760px;margin:0 auto;width:100%;padding:22px 18px 40px;}
+
+/* ===== Top author bar ===== */
+.author-bar{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid #dbe3ec;border-radius:14px;
+  padding:12px 18px;margin-bottom:22px;
+  box-shadow:0 2px 10px rgba(22,50,79,.06);
+}
+.author-bar .who{display:flex;align-items:center;gap:10px;}
+.author-bar .avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,#16324f,#2c6e9b);
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:17px;flex:0 0 auto;
+}
+.author-bar .name{font-weight:800;font-size:15.5px;color:#16324f;}
+.author-bar .role{font-size:12.5px;color:#5b6b7a;font-weight:600;}
+.wa-link{
+  display:inline-flex;align-items:center;gap:7px;
+  background:#25d366;color:#0b2e13;font-weight:800;font-size:13.5px;
+  text-decoration:none;padding:9px 16px;border-radius:22px;
+  box-shadow:0 2px 8px rgba(37,211,102,.35);transition:.15s;white-space:nowrap;
+}
+.wa-link:hover{background:#1ebe5b;transform:translateY(-1px)}
+.wa-link svg{width:16px;height:16px;fill:#0b2e13}
+
+/* ===== Notice strip ===== */
+.notice{
+  background:linear-gradient(135deg,#fff6e5,#fdf1d8);
+  border:1px solid #f1d79a;color:#8a5a00;
+  border-radius:12px;padding:13px 18px;margin-bottom:26px;
+  font-size:14px;font-weight:700;text-align:center;line-height:1.7;
+  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
+}
+.notice .dot{
+  width:9px;height:9px;border-radius:50%;background:#e8b828;flex:0 0 auto;
+  box-shadow:0 0 0 4px rgba(232,184,40,.25);
+  animation:pulse 1.8s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ===== Hero ===== */
+.hero{
+  background:linear-gradient(135deg,#16324f 0%,#1d4266 55%,#2c6e9b 100%);
+  color:#fff;border-radius:22px;padding:44px 30px;text-align:center;
+  box-shadow:0 10px 30px rgba(22,50,79,.28);
+  position:relative;overflow:hidden;margin-bottom:30px;
+}
+.hero::before{
+  content:"";position:absolute;top:-60px;left:-60px;width:220px;height:220px;
+  background:radial-gradient(circle,rgba(255,255,255,.10),transparent 70%);
+}
+.hero::after{
+  content:"";position:absolute;bottom:-70px;right:-70px;width:260px;height:260px;
+  background:radial-gradient(circle,rgba(255,255,255,.08),transparent 70%);
+}
+.hero-icon{font-size:40px;margin-bottom:10px;position:relative;z-index:1;}
+.hero h1{font-size:26px;font-weight:800;line-height:1.5;position:relative;z-index:1;margin-bottom:10px;}
+.hero p.sub{font-size:15px;opacity:.92;font-weight:600;position:relative;z-index:1;}
+.hero .divider{
+  width:60px;height:4px;background:#e8b828;border-radius:4px;margin:16px auto;position:relative;z-index:1;
+}
+
+/* ===== Topics grid ===== */
+.section-label{
+  font-size:14px;font-weight:800;color:#2c6e9b;text-transform:uppercase;letter-spacing:.5px;
+  margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.section-label::after{content:"";flex:1;height:1px;background:#d3dce6;}
+
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:30px;}
+@media(max-width:560px){.topics{grid-template-columns:1fr;}}
+
+.topic-btn{
+  position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  background:#fff;border:2px solid #e1e8f0;border-radius:18px;
+  padding:30px 18px;text-decoration:none;color:#16324f;
+  box-shadow:0 3px 14px rgba(22,50,79,.07);
+  transition:.2s ease;cursor:pointer;min-height:150px;
+}
+.topic-btn:hover{
+  transform:translateY(-4px);
+  border-color:#2c6e9b;
+  box-shadow:0 10px 24px rgba(22,50,79,.16);
+}
+.topic-btn .flag{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:800;color:#fff;
+}
+.topic-btn.ar .flag{background:linear-gradient(135deg,#16324f,#2c6e9b);}
+.topic-btn.en .flag{background:linear-gradient(135deg,#2c6e9b,#16324f);}
+.topic-btn .lang-tag{
+  position:absolute;top:12px;left:14px;
+  font-size:11px;font-weight:800;padding:3px 10px;border-radius:10px;
+  letter-spacing:.4px;
+}
+.topic-btn.ar .lang-tag{background:#e8f1f8;color:#2c6e9b;}
+.topic-btn.en .lang-tag{background:#eef3f8;color:#16324f;direction:ltr;}
+.topic-btn .t-title{font-size:17px;font-weight:800;text-align:center;line-height:1.5;}
+.topic-btn .t-cta{font-size:12.5px;color:#5b6b7a;font-weight:600;}
+.topic-btn.en .t-cta{direction:ltr;}
+
+/* ===== Footer note ===== */
+.footer-note{
+  margin-top:auto;
+  text-align:center;padding-top:18px;color:#5b6b7a;font-size:12.5px;font-weight:600;
+  border-top:1px solid #dbe3ec;
+}
+.footer-note b{color:#16324f;}
+</style>
+</head>
+<body>
+
+<div class="bg-decor"></div>
+
+<div class="wrap">
+
+  <!-- Author bar -->
+  <div class="author-bar">
+    <div class="who">
+      <div class="avatar">ف.ع</div>
+      <div>
+        <div class="name">إعداد الصيدلي / فيصل عسيري</div>
+        <div class="role">صيدلاني إكلينيكي — صيدليات النهدي</div>
+      </div>
+    </div>
+    <a class="wa-link" href="https://wa.me/966565833185" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.27 1.18-1.75 1.24-.45.06-.98.24-3.28-.7-2.78-1.14-4.6-3.93-4.75-4.13-.14-.2-1.13-1.5-1.13-2.86 0-1.36.71-2.02.97-2.3.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.28.02.46-.09.18-.13.29-.26.45-.13.15-.28.34-.4.46-.13.13-.27.27-.12.53.15.26.68 1.12 1.46 1.82 1 .9 1.85 1.18 2.11 1.31.26.13.41.11.56-.07.16-.18.66-.77.84-1.03.18-.26.35-.22.6-.13.24.09 1.55.73 1.82.86.26.13.44.2.5.31.07.13.07.72-.15 1.34z"/></svg>
+      واتساب للتواصل
+    </a>
+  </div>
+
+  <!-- Notice -->
+  <div class="notice">
+    <span class="dot"></span>
+    المواضيع القادمة سيتم رفعها تباعاً، وسيتم إبلاغكم فور تحديث المحتوى
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-icon">💊</div>
+    <h1>المرجع الصيدلاني التدريبي الشامل</h1>
+    <div class="divider"></div>
+    <p class="sub">فارما · OTC · مكملات غذائية · الرعاية المنزلية</p>
+  </div>
+
+  <!-- Topics -->
+  <div class="section-label">المواضيع المتاحة</div>
+  <div class="topics">
+    <a href="Pharmacy_Comprehensive_Interactive_Summary.html" class="topic-btn ar">
+      <span class="lang-tag">AR</span>
+      <div class="flag">ع</div>
+      <div class="t-title">الملخص الصيدلاني الشامل التفاعلي</div>
+      <div class="t-cta">اضغط للفتح ←</div>
+    </a>
+    <a href="EN_Pharmacy_Comprehensive_Interactive_Summary.html" class="topic-btn en">
+      <span class="lang-tag">EN</span>
+      <div class="flag">E</div>
+      <div class="t-title">Comprehensive Interactive Pharmacy Summary</div>
+      <div class="t-cta">Click to open ←</div>
+    </a>
+  </div>
+
+  <div class="footer-note">
+    جميع الحقوق محفوظة · <b>الصيدلي فيصل عسيري</b> · للاستفسار والتواصل عبر واتساب
+  </div>
+
+</div>
+
+</body>
+</html>
